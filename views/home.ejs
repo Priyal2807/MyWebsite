@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My Website</title>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script
+      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/assets/website.js">
+    </script>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lexend+Mega|Special+Elite|Zilla+Slab&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <% include partials/sideBar.ejs %>
+    <div>
+      <img src="/assets/MePic.jpeg" alt="This is me">
+    </div>
+    <div class="mainWrap">
+    <div >
+      <h1 class="about-me">About Me</h1>
+    </div>
+    <div class="ps-wrap">
+      <p class='psSum'>Professional Summary</p>
+      <p class='psSum1'>
+          <%= myPs[0].item %>
+      </p>
+    </div>
+    <div class="ps-wrap">
+      <p class='psSum'>Details</p>
+      <ul>
+
+        <% for(var i =1;i<myPs.length;i++) { %>
+            <li>
+          <%= myPs[i].item %>
+          </li><br>
+      <% } %>
+</ul>
+    </div>
+
+    </div>
+  </body>
+</html>

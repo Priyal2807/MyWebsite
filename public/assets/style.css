@@ -5,7 +5,7 @@ body
 	font-weight:300;
   max-width: 100%;
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 .settings {
 
@@ -80,7 +80,7 @@ bottom:0;
 height:100%;
 left:0;
 width:55px;
-overflow:hidden;
+/* overflow:hidden; */
 -webkit-transition:width .2s linear;
 transition:width .2s linear;
 -webkit-transform:translateZ(0) scale(1,1);
@@ -231,6 +231,9 @@ height: 100%;
   margin-top: 6vh;
   font-size: -webkit-xxx-large;
 }
+#contactMe{
+    margin-left: 20vh;
+}
 .ps-wrap {
 
     width: 110vh;
@@ -286,3 +289,95 @@ ul{
   transition:all 0.2s;
 -webkit-transition:all 0.2s;
 }
+.formStyle{
+  width: 150vh;
+  margin-left: 20vh;
+  background: rgba(186, 178, 178, 0.1);
+  padding: 30px;
+  height: 50vh;
+  -webkit-box-shadow: 10px 10px 22px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 22px 1px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 22px 1px rgba(0,0,0,0.75);
+
+}
+label {
+  width: 150px;
+      clear: left;
+      text-align: right;
+      padding-right: 10px;
+      margin-right: 5vh;
+      line-height: 6vh;
+      color: white;
+      font-family: 'Special Elite', cursive;
+      font-size: 20px;
+}
+
+input, label {
+  float: left;
+  height: 4vh;
+  /* line-height: 7vh; */
+  margin-bottom: 10px;
+}
+input,textarea{
+  border-radius: 5px;
+  width:120vh;
+  resize: none;
+}
+textarea{
+  height:20vh;
+}
+button{
+  padding:12px;
+  border-radius: 6px;
+  font-size: 20px;
+  background: white;
+  letter-spacing: 2px;
+  margin-right: 3vh;
+  font-family: 'Special Elite', cursive;
+  float: right;
+  margin-top: 2vh;
+
+}
+button:hover{
+  background: #3cbd3c;
+  color:black;
+}
+.mySkill{
+  width: 50vh;
+  margin-left: 10vh;
+  margin-bottom: 30px;
+  background: rgba(186, 178, 178, 0.1);
+  padding-top: 30px;
+  -webkit-box-shadow: 10px 10px 22px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 22px 1px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 22px 1px rgba(0,0,0,0.75);
+  float: left;
+  color: white;;
+  font-size: 30px;
+  height: 10vh;
+  font-family: 'Zilla Slab', serif;
+  text-align:center;
+
+}
+.mySkillLevel{
+  color: white;
+  font-size: 15px;
+  font-family: 'Zilla Slab', serif;
+  text-align:center;
+  padding:9px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+.mySkill:hover{
+  transform: scale(1.1);
+}
+.firstRow,.secondRow,.thirdRow{
+  margin-top: 5vh;
+
+}
+.fas,.fa-code{
+  color:white;
+  font-weight: bold;
+  margin-right: 10px;
+      margin-left: -4vh;
+  }

@@ -15,10 +15,22 @@ var webSchema = new mongoose.Schema({
   myID:String,
   item:String
 });
-
-
+var webSchema1 = new mongoose.Schema({
+  name:String,
+  email:String,
+  subject:String,
+  message:String
+});
+var webSchema2 = new mongoose.Schema({
+  myID:String,
+  item:String,
+  class:String,
+  level:String
+});
 var myWeb = mongoose.model('myWeb',webSchema);
-// var itemOne = myWeb({myID:"ps",item:"With my knack for coding"}).save(function(err){
+var myWeb1 = mongoose.model('myWeb1',webSchema1);
+var myWeb2 = mongoose.model('myWeb2',webSchema2);
+// var itemOne = myWeb2({myID:"ps",item:"HTML and CSS",class:'fas fa-code',level:'skilled'}).save(function(err){
 //   if(err) throw err;
 //   console.log("Item Saveed");
 // });
@@ -35,8 +47,19 @@ module.exports = function(app){
   app.get('/contact',function(req,res){
     res.render('contact');
   });
+  app.post('/contact',urlencodedParser,function(req,res){
+    var contactMe = myWeb1(req.body).save(function(err,data){
+      if(err) throw err;
+
+      //  res.json(data);
+    });
+    res.redirect('/');
+  });
   app.get('/skill',function(req,res){
-    res.render('skill');
+    myWeb2.find({myID:'sk'},function(err,data){
+      if(err) throw err;
+      res.render('skill',{skills:data});
+    });
   });
   app.get('/project',function(req,res){
     res.render('project');

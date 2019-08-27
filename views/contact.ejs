@@ -10,15 +10,32 @@
       crossorigin="anonymous"></script>
     <script type="text/javascript" src="/assets/website.js">
     </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lexend+Mega|Special+Elite|Zilla+Slab&display=swap" rel="stylesheet">
   </head>
   <body>
   <%include partials/sideBar.ejs %>
-  <form class="" action="index.html" method="post">
-    
+  <div class="contactSlide">
+    <h1 class="about-me" id="contactMe">Contact</h1>
+  </div>
+  <div class="formStyle col-md-10">
+
+  <form method="post">
+      <label for="name">Your name</label>
+      <input type="text" name="name" placeholder="Your name" required><br>
+      <label for="email">Your email</label>
+      <input type="text" name="email" placeholder="Your email address" required><br>
+      <label for="subject">Subject</label>
+      <input type="text" name="subject" placeholder="Subject" required><br>
+      <label for="message">Your message</label>
+      <textarea type="text" name="message" placeholder="Message" required></textarea><br>
+      <button type="Submit">Send</button>
+
   </form>
+
+</div>
 
   </body>
 </html>

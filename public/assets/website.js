@@ -9,6 +9,12 @@ $(function(){
       '-webkit-transition':'all 0.2s',
       '-webkit-transform':'translateZ(0) scale(1,1)'
   });
+  $('.formStyle ,.contactSlide').css({
+    'margin-left':'40vh',
+    'transition':'all 0.2s',
+    '-webkit-transition':'all 0.2s',
+    '-webkit-transform':'translateZ(0) scale(1,1)'
+  });
 $('img').addClass('myImgafter');
 $('img').removeClass('myImg');
   });
@@ -19,6 +25,12 @@ $('img').removeClass('myImg');
       '-webkit-transition':'all 0.2s',
       '-webkit-transform':'translateZ(0) scale(1,1)',
       'margin-left':'1vh'
+  });
+  $('.formStyle ,.contactSlide').css({
+    'margin-left':'20vh',
+    'transition':'all 0.2s',
+    '-webkit-transition':'all 0.2s',
+    '-webkit-transform':'translateZ(0) scale(1,1)'
   });
 $('img').removeClass('myImgafter');
 $('img').addClass('myImg');

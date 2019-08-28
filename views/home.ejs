@@ -3,23 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>My Website</title>
-    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
     <script
       src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
       integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
       crossorigin="anonymous"></script>
     <script type="text/javascript" src="/assets/website.js">
     </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lexend+Mega|Special+Elite|Zilla+Slab&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+  <script src="/assets/jquery.counterup.min.js"></script>
   </head>
   <body>
     <% include partials/sideBar.ejs %>
-    <div>
+    <div class="col-md-4">
       <img src="/assets/MePic.jpeg" alt="This is me">
     </div>
-    <div class="mainWrap">
+    <div class="mainWrap col-md-6">
     <div >
       <h1 class="about-me">About Me</h1>
     </div>

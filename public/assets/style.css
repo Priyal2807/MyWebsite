@@ -381,3 +381,43 @@ button:hover{
   margin-right: 10px;
       margin-left: -4vh;
   }
+  .counter{
+      background: rgba(186, 178, 178, 0.1);
+      -webkit-box-shadow: 10px 10px 22px 1px rgba(0,0,0,0.75);
+      -moz-box-shadow: 10px 10px 22px 1px rgba(0,0,0,0.75);
+      box-shadow: 10px 10px 22px 1px rgba(0,0,0,0.75);
+      color : white;
+      font-size: 18px;
+      width: 50vh;
+      /* height:30vh; */
+      float: left;
+
+      margin-top: 2vh;
+      text-align: center;
+      padding-top: 1vh;
+      padding-bottom: 4vh;
+      border-radius: 40%;
+      letter-spacing: 2px;
+      font-family: 'Zilla Slab', serif;
+      margin-left: 70vh;
+      padding-right: 2vh;
+  }
+  .Projects {
+
+    color: white;
+    font-size: 18px;
+    width: 50vh;
+    /* height:30vh; */
+    text-align: center;
+    padding-top: 1vh;
+    padding-bottom: 3vh;
+    border-radius: 40%;
+    letter-spacing: 2px;
+    font-family: 'Zilla Slab', serif;
+    margin-top: 5vh;
+    position: absolute;
+    left: 0px;
+    margin-left:72vh;
+    float: left;
+
+  }

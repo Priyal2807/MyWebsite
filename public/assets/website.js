@@ -82,3 +82,44 @@ function slideshow(){
   // setInterval(slideshow,3000);
 
 });
+
+// jquery for the li of projectSlideShow
+
+$(function(){
+  $('.slideButtons > li:first' ).css('background','yellow');
+var c = 0;
+function slideshowLi(){
+  if(c === 4){
+    var activeLi =  $('.slideButtons').find('.active');
+    activeLi.removeClass('active');
+    activeLi.css('background','white');
+      $('.slideButtons > li:first').css('background','yellow').addClass('active');
+      c = 0;
+  }
+else{
+var activeLi =  $('.slideButtons').find('.active');
+activeLi.css('background','white');
+activeLi.next().css('background','yellow');
+if(c!=4){
+activeLi.next().addClass('active');}
+
+activeLi.removeClass('active');
+
+c++;
+}
+}
+
+  function liinterval(){
+    initList1 = setInterval(slideshowLi, 3000) ;
+  }
+  $('.projectSlideShow').mouseover(function(){
+    clearInterval(initList1);
+ }).mouseout(function(){
+    liinterval();
+
+ });
+ liinterval();
+
+
+
+});

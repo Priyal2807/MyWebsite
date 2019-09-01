@@ -1,97 +1,98 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>My Projects</title>
-    <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
-    <script
-      src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
-      integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
-      crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/assets/website.js">
 
-    </script>
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/assets/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Lexend+Mega|Special+Elite|Zilla+Slab&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+<head>
+
+  <meta charset="utf-8">
+  <title>My Projects</title>
+  <script src="http://code.jquery.com/jquery-2.2.3.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="/assets/website.js">
+
+  </script>
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lexend+Mega|Special+Elite|Zilla+Slab&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
   <script src="/assets/jquery.counterup.min.js"></script>
 
-  </head>
-  <body>
+</head>
+
+<body>
   <% include partials/sideBar.ejs %>
   <div class="mainWrap">
-  <div class="about-me">
-    Projects
-  </div>
-</div>
-<div class="mainWrap">
-  <span class="counter">5
-
-  </span>
-  <div class="Projects">
-    Projects Completed
-  </div>
-
-  <div class="projectSlideShow">
-    <div class="projectEmpty">
-
-    </div>
-    <div class="project1 active">
-      <ul class="proUl">
-        <h2>Node-app</h2>
-        <li> Learned node.js online and made a todo-app using Node.js and mongodb. </li>
-        <li> The todo-app allows the user to insert an item and delete it by simply clicking on it.</li>
-        <li> Mongodb is used to store the inserted data.</li>
-      </ul>
-
-  </div>
-    <div class="project2">
-      <ul class="proUl">
-        <h2>My Website</h2>
-        <li>Made a website using node.js,mongodb and jquery that acts like my resume and contains details about the projects done so far and skills.</li>
-        <li>The website uses data which is loaded from database using mongdb.</li>
-        <li>Node.js is used to run the website on localhost and make the website dynamic by making connection with the database.</li>
-      </ul>
-    </div>
-    <div class="project3">
-      <ul class="proUl">
-        <h2><a href="https://github.com/Priyal2807/TempAndHumController">Temperature and Humidity Controller</a></h2>
-        <li>In a team of 5 made an embedded system based project.</li>
-        <li>It is a temperature and humidity controller based on Arduino.</li>
-        <li>Other modules like DHT11 sensor, LCD display were used to record data into an excel sheet using the gobetwino software.</li>
-        <li>Later the collected data was used to test a machine learning model which was trained using data collected from kaggle.</li>
-      </ul>
-    </div>
-    <div class="project4">
-      <ul class="proUl">
-        <h2><a href="https://github.com/Priyal2807/Classification-of-Autism-Data">Classification of Autism Data using different Classification techniques</a></h2>
-        <li>In a team of four, we worked on identifying whether an individual has Autism or not by training our model with Autism data which we collected from Kaggle.</li>
-        <li>Used Logistic regression,SVM,Decision Tree and various other classification techniques.</li>
-        <li>Achieved accuracy of around 80-90% for most of the techniques.</li>
-      </ul>
-    </div>
-    <div class="project5">
-      <ul class="proUl">
-        <h2>Guide</h2>
-        <li>Designed the front end of a website using HTML and css.</li>
-      </ul>
+    <div class="about-me">
+      Projects
     </div>
   </div>
-<div >
-  <ul class="slideButtons">
-    <li class="active"></li>
-    <li></li>
-    <li></li>
-    <li></li>
-    <li></li>
-  </ul>
+  <div class="mainWrap">
+    <span class="counter">5
 
-</div>
+    </span>
+    <div class="Projects">
+      Projects Completed
+    </div>
 
-</div>
+    <div class="projectSlideShow">
+      <div class="projectEmpty">
 
-  </body>
+      </div>
+      <div class="project1 active">
+        <ul class="proUl">
+          <h2>Node-app</h2>
+          <li> Learned node.js online and made a todo-app using Node.js and mongodb. </li>
+          <li> The todo-app allows the user to insert an item and delete it by simply clicking on it.</li>
+          <li> Mongodb is used to store the inserted data.</li>
+        </ul>
+
+      </div>
+      <div class="project2">
+        <ul class="proUl">
+          <h2>My Website</h2>
+          <li>Made a website using node.js,mongodb and jquery that acts like my resume and contains details about the projects done so far and skills.</li>
+          <li>The website uses data which is loaded from database using mongdb.</li>
+          <li>Node.js is used to run the website on localhost and make the website dynamic by making connection with the database.</li>
+        </ul>
+      </div>
+      <div class="project3">
+        <ul class="proUl">
+          <h2><a href="https://github.com/Priyal2807/TempAndHumController">Temperature and Humidity Controller</a></h2>
+          <li>In a team of 5 made an embedded system based project.</li>
+          <li>It is a temperature and humidity controller based on Arduino.</li>
+          <li>Other modules like DHT11 sensor, LCD display were used to record data into an excel sheet using the gobetwino software.</li>
+          <li>Later the collected data was used to test a machine learning model which was trained using data collected from kaggle.</li>
+        </ul>
+      </div>
+      <div class="project4">
+        <ul class="proUl">
+          <h2><a href="https://github.com/Priyal2807/Classification-of-Autism-Data">Classification of Autism Data using different Classification techniques</a></h2>
+          <li>In a team of four, we worked on identifying whether an individual has Autism or not by training our model with Autism data which we collected from Kaggle.</li>
+          <li>Used Logistic regression,SVM,Decision Tree and various other classification techniques.</li>
+          <li>Achieved accuracy of around 80-90% for most of the techniques.</li>
+        </ul>
+      </div>
+      <div class="project5">
+        <ul class="proUl">
+          <h2>Guide</h2>
+          <li>Designed the front end of a website using HTML and css.</li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <ul class="slideButtons">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</body>
+
 </html>

@@ -12,6 +12,8 @@ const methodOverride = require('method-override');
 
 
 const conn = mongoose.createConnection('mongodb://localhost/myWebsite');
+
+/* start of code used to upload the resume */
 //init gfs
 let gfs;
 conn.once('open', function() {
@@ -29,7 +31,7 @@ const storage = new GridFsStorage({
         if (err) {
           return reject(err);
         }
-        const filename = buf.toString('hex') + path.extname(file.originalname);
+        const filename = file.originalname;
         const fileInfo = {
           filename: filename,
           bucketName: 'uploads'
@@ -42,6 +44,8 @@ const storage = new GridFsStorage({
 const upload = multer({
   storage
 });
+
+/* end of code used to upload the resume */
 
 //creating a schema - this is like a blueprint
 var webSchema = new mongoose.Schema({
@@ -124,4 +128,46 @@ module.exports = function(app) {
       file: req.file
     });
   });
+
+
+  app.get('/download/:name', (req, res) => {
+    gfs.collection('uploads');
+    var fname = req.params.name;
+    console.log(fname);
+    // gfs.exist({
+    //   filename: fname
+    // }, (err, file) => {
+    //   if (err || !file) {
+    //     res.status(404).send('file not found');
+    //     return;
+    //   }
+
+    gfs.files.find({
+      filename: fname
+    }).toArray(function(err, files) {
+      if (!files || files.length === 0) {
+        return res.status(404).json({
+          responseCode: 1,
+          responseMessage: "error"
+        });
+      }
+      // var mimetype = mime.lookup(files[0].filename);
+      res.set('Content-Type', files[0].contentType);
+      res.set('Content-Disposition', 'attachment; filename="' + files[0].filename + '"');
+
+
+      var readstream = gfs.createReadStream({
+        filename: fname,
+        root: "uploads"
+      });
+
+      readstream.on("error", function(err) {
+        res.end();
+      });
+
+      return readstream.pipe(res);
+    });
+  });
+
+
 };

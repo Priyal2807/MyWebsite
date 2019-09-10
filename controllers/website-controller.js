@@ -61,14 +61,17 @@ var webSchema1 = new mongoose.Schema({
 var webSchema2 = new mongoose.Schema({
   myID: String,
   item: String,
-  class: String,
   level: String
 });
 var myWeb = conn.model('myWeb', webSchema);
 var myWeb1 = conn.model('myWeb1', webSchema1);
 var myWeb2 = conn.model('myWeb2', webSchema2);
-// var itemOne = myWeb2({myID:"ps",item:"HTML and CSS",class:'fas fa-code',level:'skilled'}).save(function(err){
-//   if(err) throw err;
+// var itemOne = myWeb2({
+//   myID: "sk",
+//   item: "HTML and CSS",
+//   level: 'skilled'
+// }).save(function(err) {
+//   if (err) throw err;
 //   console.log("Item Saveed");
 // });
 

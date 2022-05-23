@@ -66,14 +66,13 @@ var webSchema2 = new mongoose.Schema({
 var myWeb = conn.model('myWeb', webSchema);
 var myWeb1 = conn.model('myWeb1', webSchema1);
 var myWeb2 = conn.model('myWeb2', webSchema2);
-// var itemOne = myWeb2({
-//   myID: "sk",
-//   item: "HTML and CSS",
-//   level: 'skilled'
-// }).save(function(err) {
-//   if (err) throw err;
-//   console.log("Item Saveed");
-// });
+ var itemOne = myWeb({
+   myID: "ps",
+   item: "Hello"
+ }).save(function(err) {
+   if (err) throw err;
+   console.log("Item Saveed");
+ });
 
 module.exports = function(app) {
   app.get('/', function(req, res) {
@@ -83,8 +82,10 @@ module.exports = function(app) {
       }, {
         myID: "ps"
       }]
-    }, function(err, data) {
-      if (err) throw err;
+    }, function (err, data) {
+        console.log(data);
+        if (err) throw err;
+   
       res.render('home', {
         myPs: data
       }); //this data comes from find method

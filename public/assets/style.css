@@ -260,11 +260,11 @@ ul {
 }
 
 .formStyle {
-  width: 150vh;
+  width: 70%;
   margin-left: 20vh;
   background: rgba(186, 178, 178, 0.1);
   padding: 30px;
-  height: 50vh;
+  height: auto;
   -webkit-box-shadow: 10px 10px 22px 1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 22px 1px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 22px 1px rgba(0, 0, 0, 0.75);
@@ -291,7 +291,7 @@ input, label {
 
 input, textarea {
   border-radius: 5px;
-  width: 120vh;
+  width: 60%;
   resize: none;
 }
 
@@ -300,7 +300,6 @@ textarea {
 }
 
 button {
-  padding: 12px;
   border-radius: 6px;
   font-size: 20px;
   background: white;
@@ -308,7 +307,7 @@ button {
   margin-right: 3vh;
   font-family: 'Special Elite', cursive;
   float: right;
-  margin-top: 2vh;
+ 
 }
 
 button:hover {
@@ -317,21 +316,23 @@ button:hover {
 }
 
 .mySkill {
-  width: 50vh;
-  margin-left: 10vh;
-  margin-bottom: 30px;
-  background: rgba(186, 178, 178, 0.1);
-  padding-top: 30px;
-  -webkit-box-shadow: 10px 10px 22px 1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 10px 10px 22px 1px rgba(0, 0, 0, 0.75);
-  box-shadow: 10px 10px 22px 1px rgba(0, 0, 0, 0.75);
-  float: left;
-  color: white;
-  ;
-  font-size: 30px;
-  height: 10vh;
-  font-family: 'Zilla Slab', serif;
-  text-align: center;
+    width: 25%;
+    margin-left: 10vh;
+    margin-bottom: 30px;
+    background: rgba(186, 178, 178, 0.1);
+    padding-top: 30px;
+    -webkit-box-shadow: 10px 10px 22px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 10px 10px 22px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 10px 10px 22px 1px rgba(0, 0, 0, 0.75);
+    float: left;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 30px;
+    height: 10vh;
+    font-family: 'Zilla Slab', serif;
+    text-align: center;
 }
 
 .mySkillLevel {
@@ -339,7 +340,7 @@ button:hover {
   font-size: 15px;
   font-family: 'Zilla Slab', serif;
   text-align: center;
-  padding: 9px;
+  padding: 2px;
   text-transform: capitalize;
   letter-spacing: 2px;
 }
@@ -401,11 +402,11 @@ button:hover {
 
 /* css for each project card */
 .projectSlideShow .project1, .projectEmpty {
-  width: 100vh;
-  height: 60vh;
+  width: 70%;
+  height: auto;
   margin-top: 3vh;
-  margin-left: 50vh;
-  margin-bottom: 30px;
+  margin-left: 30vh;
+  margin-bottom: 5vh;
   margin-right: 30vh;
   background: rgba(186, 178, 178, 0.1);
   padding-top: 30px;
@@ -427,7 +428,9 @@ button:hover {
   font-size: 15px;
   font-family: 'Zilla Slab', serif;
 }
-
+#democen{
+    margin:0 auto;
+}
 .proUl li {
   list-style-type: disc;
   padding: 15px;

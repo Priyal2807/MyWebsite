@@ -83,7 +83,6 @@ module.exports = function(app) {
         myID: "ps"
       }]
     }, function (err, data) {
-        console.log(data);
         if (err) throw err;
    
       res.render('home', {

@@ -1,5 +1,4 @@
 $(document).ready(function() {
-  $('img').addClass('myImg');
 
   //counter used to display the no. of projects Completed
   $('.counter').counterUp({
@@ -23,8 +22,6 @@ $(function() {
       '-webkit-transition': 'all 0.2s',
       '-webkit-transform': 'translateZ(0) scale(1,1)'
     });
-    $('img').addClass('myImgafter');
-    $('img').removeClass('myImg');
   });
   $('.main-menu').mouseout(function() {
     $('.mainWrap').css({
@@ -40,9 +37,6 @@ $(function() {
       '-webkit-transition': 'all 0.2s',
       '-webkit-transform': 'translateZ(0) scale(1,1)'
     });
-    $('img').removeClass('myImgafter');
-    $('img').addClass('myImg');
-
   });
 
 
@@ -86,9 +80,6 @@ $(function() {
   });
   cinterval();
 
-  //
-  // setInterval(slideshow,3000);
-
 });
 
 // jquery for the li of projectSlideShow
@@ -129,7 +120,5 @@ $(function() {
 
   });
   liinterval();
-
-
 
 });

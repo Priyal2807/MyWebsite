@@ -55,7 +55,7 @@ $(function() {
   var count = 0;
 
   function slideshow() {
-    if (count === 5) {
+    if (count === 4) {
       $('.projectEmpty').empty();
       $('.projectEmpty').append($('.project1').html()).show();
       $('.project1').addClass('active');
@@ -98,7 +98,7 @@ $(function() {
   var c = 0;
 
   function slideshowLi() {
-    if (c === 5) {
+    if (c === 4) {
       var activeLi = $('.slideButtons').find('.active');
       activeLi.removeClass('active');
       activeLi.css('background', 'white');
@@ -108,7 +108,7 @@ $(function() {
       var activeLi = $('.slideButtons').find('.active');
       activeLi.css('background', 'white');
       activeLi.next().css('background', 'yellow');
-      if (c != 5) {
+      if (c != 4) {
         activeLi.next().addClass('active');
       }
 

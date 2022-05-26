@@ -203,11 +203,12 @@ nav ul, nav li {
 }
 
 .ps-wrap {
-  width: 110vh;
+  width: 150vh;
   margin-left: 10vh;
   margin-bottom: 30px;
   background: rgba(186, 178, 178, 0.1);
   padding: 10px;
+  height:auto;
   -webkit-box-shadow: 10px 10px 22px 1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 22px 1px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 22px 1px rgba(0, 0, 0, 0.75);

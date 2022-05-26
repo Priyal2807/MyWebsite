@@ -1,6 +1,9 @@
 var express = require('express');
 var webController = require('./controllers/website-controller.js');
 var app = express();
+const config = require('config');
+
+let appPort = config.get('app.port');
 //setting up a template engine
 app.set('view engine','ejs');
 
@@ -9,5 +12,5 @@ app.use(express.static('./public'));
 
 webController(app);
 
-app.listen(3000);
-console.log('u are listening to port 3000');
+app.listen(appPort);
+console.log(`u are listening to port ${appPort}`);

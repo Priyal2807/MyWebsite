@@ -1,4 +1,5 @@
 var bodyParser = require('body-parser');
+const config = require('config');
 var urlencodedParser = bodyParser.urlencoded({
   extended: false
 }); //this is a piece of middleware which handles the post data for the post handler
@@ -9,9 +10,9 @@ const multer = require('multer');
 const GridFsStorage = require('multer-gridfs-storage');
 const Grid = require('gridfs-stream');
 const methodOverride = require('method-override');
-
-
-const conn = mongoose.createConnection('mongodb://localhost/myWebsite');
+const uri = config.get('db.url');
+    
+const conn = mongoose.createConnection(uri);
 
 /* start of code used to upload the resume */
 //init gfs
@@ -24,7 +25,7 @@ conn.once('open', function() {
 
 //creating storage engine
 const storage = new GridFsStorage({
-  url: 'mongodb://localhost/myWebsite',
+  url: uri,
   file: (req, file) => {
     return new Promise((resolve, reject) => {
       crypto.randomBytes(16, (err, buf) => {
@@ -66,12 +67,13 @@ var webSchema2 = new mongoose.Schema({
 var myWeb = conn.model('myWeb', webSchema);
 var myWeb1 = conn.model('myWeb1', webSchema1);
 var myWeb2 = conn.model('myWeb2', webSchema2);
- //var itemOne = myWeb({
+ //var itemOne = myWeb2({
  //  myID: "ps",
- //  item: "Hello"
+ //    item: "HTML and CSS",
+ //  level: "skilled"
  //}).save(function(err) {
- //  if (err) throw err;
- //  console.log("Item Saveed");
+ // if (err) throw err;
+ // console.log("Item Saveed");
  //});
 
 module.exports = function(app) {

@@ -1,24 +1,20 @@
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 const config = require('config');
 var urlencodedParser = bodyParser.urlencoded({
   extended: false
-}); //this is a piece of middleware which handles the post data for the post handler
-var mongoose = require('mongoose');
-const path = require('path');
+});
+const mongoose = require('mongoose');
 const crypto = require('crypto');
 const multer = require('multer');
 const GridFsStorage = require('multer-gridfs-storage');
 const Grid = require('gridfs-stream');
-const methodOverride = require('method-override');
 //const uri = config.get('db.url');
 const uri = process.env.MONGODB_URI;
 const conn = mongoose.createConnection(uri);
 
 /* start of code used to upload the resume */
-//init gfs
 let gfs;
 conn.once('open', function() {
-  //init stream
   gfs = Grid(conn.db, mongoose.mongo);
   gfs.collection('uploads');
 })
@@ -64,9 +60,9 @@ var webSchema2 = new mongoose.Schema({
   item: String,
   level: String
 });
-var myWeb = conn.model('myWeb', webSchema);
-var myWeb1 = conn.model('myWeb1', webSchema1);
-var myWeb2 = conn.model('myWeb2', webSchema2);
+var myWeb = conn.model('myWeb', webSchema); //for the home page
+var myWeb1 = conn.model('myWeb1', webSchema1); //for the contact page
+var myWeb2 = conn.model('myWeb2', webSchema2); //for the skills page
  //var itemOne = myWeb2({
  //  myID: "ps",
  //    item: "HTML and CSS",
@@ -76,6 +72,7 @@ var myWeb2 = conn.model('myWeb2', webSchema2);
  // console.log("Item Saveed");
  //});
 
+// home page
 module.exports = function(app) {
   app.get('/', function(req, res) {
     myWeb.find({
@@ -89,24 +86,24 @@ module.exports = function(app) {
    
       res.render('home', {
         myPs: data
-      }); //this data comes from find method
+      }); 
     });
   });
+
+//contact page
   app.get('/contact', function(req, res) {
     res.render('contact');
   });
 
-  //here we have /contact because on the form page we did not specify any
-  //action tag and by default it is the same page for action
-  //if we change the action tag then the same value should also go in app.post
+//submit contact page
   app.post('/contact', urlencodedParser, function(req, res) {
     var contactMe = myWeb1(req.body).save(function(err, data) {
       if (err) throw err;
-
-      //  res.json(data);
     });
     res.redirect('/');
   });
+
+//skill page
   app.get('/skill', function(req, res) {
     myWeb2.find({
       myID: 'sk'
@@ -126,26 +123,18 @@ module.exports = function(app) {
   });
 
 
-  //route POST /uploads
-  //uploads file to DB
+//cv page to upload my resume
   app.post('/upload', upload.single('resume'), function(req, res) {
     res.json({
       file: req.file
     });
   });
 
-
+//download page
   app.get('/download/:name', (req, res) => {
     gfs.collection('uploads');
     var fname = req.params.name;
-    console.log(fname);
-    // gfs.exist({
-    //   filename: fname
-    // }, (err, file) => {
-    //   if (err || !file) {
-    //     res.status(404).send('file not found');
-    //     return;
-    //   }
+    //console.log(fname);
 
     gfs.files.find({
       filename: fname
@@ -156,7 +145,6 @@ module.exports = function(app) {
           responseMessage: "error"
         });
       }
-      // var mimetype = mime.lookup(files[0].filename);
       res.set('Content-Type', files[0].contentType);
       res.set('Content-Disposition', 'attachment; filename="' + files[0].filename + '"');
 

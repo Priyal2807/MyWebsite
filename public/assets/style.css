@@ -19,7 +19,7 @@ body {
   font-family: 'Strait', sans-serif;
 }
 
-/* ScrolBar  */
+/* ScrollBar start */
 .scrollbar {
   height: 90%;
   width: 100%;
@@ -33,6 +33,8 @@ body {
   overflow-y: hidden;
   overflow-x: hidden;
 }
+
+/*scrollbar end*/
 
 /* Scrollbar Style */
 #style-1::-webkit-scrollbar-track {
@@ -49,6 +51,9 @@ body {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
   background-color: #BFBFBF;
 }
+/*scroll style end*/
+
+/*sidebar start*/
 
 .main-menu:hover, nav.main-menu.expanded {
   width: 250px;
@@ -127,6 +132,8 @@ body {
   overflow-y: auto;
   overflow: visible;
 }
+
+/*scrollbar end*/
 
 /* Logo Hover Property */
 .settings:hover, settings:focus {

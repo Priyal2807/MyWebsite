@@ -11,30 +11,30 @@ $(document).ready(function() {
 $(function() {
   $('.main-menu').mouseover(function() {
     $('.mainWrap').css({
-      'margin-left': '30vh',
-      'transition': 'all 0.2s',
-      '-webkit-transition': 'all 0.2s',
+       'margin-left': '250px',
+      'transition': 'all 0.4s',
+      '-webkit-transition': 'all 0.4s',
       '-webkit-transform': 'translateZ(0) scale(1,1)'
     });
     $('.formStyle ,.contactSlide').css({
-      'margin-left': '40vh',
-      'transition': 'all 0.2s',
-      '-webkit-transition': 'all 0.2s',
+        'margin-left': '250px',
+      'transition': 'all 0.4s',
+      '-webkit-transition': 'all 0.4s',
       '-webkit-transform': 'translateZ(0) scale(1,1)'
     });
   });
   $('.main-menu').mouseout(function() {
     $('.mainWrap').css({
       // 'transition':'width 5s linear ',
-      'transition': 'all 0.2s',
-      '-webkit-transition': 'all 0.2s',
+      'transition': 'all 0.4s',
+      '-webkit-transition': 'all 0.4s',
       '-webkit-transform': 'translateZ(0) scale(1,1)',
       'margin-left': '1vh'
     });
     $('.formStyle ,.contactSlide').css({
-      'margin-left': '20vh',
-      'transition': 'all 0.2s',
-      '-webkit-transition': 'all 0.2s',
+      'margin-left': '10vh',
+      'transition': 'all 0.4s',
+      '-webkit-transition': 'all 0.4s',
       '-webkit-transform': 'translateZ(0) scale(1,1)'
     });
   });

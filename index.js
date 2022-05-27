@@ -3,7 +3,7 @@ var webController = require('./controllers/website-controller.js');
 var app = express();
 const config = require('config');
 
-let appPort = config.get('app.port') || process.env.PORT;
+let appPort = process.env.PORT || config.get('app.port');
 //setting up a template engine
 app.set('view engine','ejs');
 

@@ -226,7 +226,7 @@ nav ul, nav li {
   color: white;
   letter-spacing: 3px;
   margin-left: 8vh;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .psSum1, .DetailsUL {
@@ -234,7 +234,7 @@ nav ul, nav li {
   letter-spacing: 3px;
   margin-left: 8vh;
   margin-right: 8vh;
-  font-size: 15px;
+  font-size: 13px;
   font-family: 'Zilla Slab', serif;
 }
 

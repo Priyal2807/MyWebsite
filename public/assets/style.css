@@ -273,6 +273,7 @@ ul {
     -webkit-box-shadow: 5px 5px 5px 1px #d5d8dc;
     -moz-box-shadow: 5px 5px 5px 1px #d5d8dc;
     box-shadow: 5px 5px 5px 1px #d5d8dc;
+    border-radius: 7px;
 }
 
 label {

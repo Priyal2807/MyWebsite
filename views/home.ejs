@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="/assets/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lexend+Mega|Special+Elite|Zilla+Slab&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -31,13 +33,17 @@
     <div class="ps-wrap">
       <p class='psSum'>Work Experience</p>
       <ul class="DetailsUL">
-        <%= myPs[1].item %>
+        <% for(var i = 1;i<myPs.length-1;i++){%>
+        <li>
+            <%= myPs[i].item %>
+        </li>
+        <%}%>
       </ul>
     </div>
       <div class="ps-wrap">
       <p class='psSum'>Personal Exploration</p>
       <ul class="DetailsUL">
-        <%= myPs[2].item %>
+        <%= myPs[myPs.length-1].item %>
       </ul>
     </div>
 

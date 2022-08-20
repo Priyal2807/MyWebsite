@@ -8,8 +8,8 @@ const crypto = require('crypto');
 const multer = require('multer');
 const GridFsStorage = require('multer-gridfs-storage');
 const Grid = require('gridfs-stream');
-//const uri = config.get('db.url');
-const uri = process.env.MONGODB_URI;
+const uri = config.get('db.url');
+//const uri = process.env.MONGODB_URI;
 const conn = mongoose.createConnection(uri);
 
 /* start of code used to upload the resume */

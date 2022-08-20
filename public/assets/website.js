@@ -85,7 +85,7 @@ $(function() {
 // jquery for the li of projectSlideShow
 
 $(function() {
-  $('.slideButtons > li:first').css('background', 'yellow');
+  $('.slideButtons > li:first').css('background', 'black');
   var c = 0;
 
   function slideshowLi() {
@@ -93,12 +93,12 @@ $(function() {
       var activeLi = $('.slideButtons').find('.active');
       activeLi.removeClass('active');
       activeLi.css('background', 'white');
-      $('.slideButtons > li:first').css('background', 'yellow').addClass('active');
+      $('.slideButtons > li:first').css('background', 'black').addClass('active');
       c = 0;
     } else {
       var activeLi = $('.slideButtons').find('.active');
       activeLi.css('background', 'white');
-      activeLi.next().css('background', 'yellow');
+      activeLi.next().css('background', 'black');
       if (c != 4) {
         activeLi.next().addClass('active');
       }

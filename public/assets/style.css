@@ -367,7 +367,6 @@ button:hover {
   margin-left: -4vh;
 }
 
-/* css for the counter on projects page */
 .Projects {
     font-size: 18px;
     width: 50vh;
@@ -397,6 +396,7 @@ button:hover {
     -webkit-box-shadow: 5px 5px 5px 1px #D5D8DC;
     -moz-box-shadow: 5px 5px 5px 1px #D5D8DC;
     box-shadow: 5px 5px 5px 1px #D5D8DC;
+    border-radius: 7px;
     float: left;
     font-size: 20px;
     letter-spacing: 1px;

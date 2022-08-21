@@ -449,3 +449,13 @@ button:hover {
   height: 0vh;
   margin-left: 92vh;
 }
+
+.detailsBox{
+    display:flex;
+    justify-content:center;
+    text-align: center;
+    flex-direction: column;
+}
+.detail {
+    font-family: 'Roboto', sans-serif;
+}

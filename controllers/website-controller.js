@@ -95,6 +95,11 @@ module.exports = function(app) {
     res.render('contact');
   });
 
+//details page
+    app.get('/details', function (req, res) {
+        res.render('details');
+    });
+
 //submit contact page
   app.post('/contact', urlencodedParser, function(req, res) {
     var contactMe = myWeb1(req.body).save(function(err, data) {
